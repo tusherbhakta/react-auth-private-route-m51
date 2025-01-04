@@ -9,6 +9,7 @@ import App from './App.jsx'
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
 import SignUp from './components/SignUp.jsx';
+import Main from './components/Main.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,17 +18,17 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element:<Home></Home>
+        element:<Home></Home>,
       },
       {
         path: 'login',
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: 'signup',
-        element: <SignUp></SignUp>
-      }
-    ]
+        element: <SignUp></SignUp>,
+      },
+    ],
   },
 ]);
 
