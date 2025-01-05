@@ -1,10 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const handleSignup = e =>{
         e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
     }
     return (
         <div className="hero bg-base-200 min-h-screen">
@@ -32,7 +31,7 @@ const SignUp = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">SignUp</button>
                         </div>
-                        <p>Already have account? <Link to={'/signup'}>Login</Link> </p>
+                        <p>Already have an account? <Link to={'/login'}>Login</Link> </p>
                     </form>
                 </div>
             </div>
