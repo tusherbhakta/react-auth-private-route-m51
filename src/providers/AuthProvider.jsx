@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AuthProviders = () => {
+const AuthProvider = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const AuthProviders = () => {
     );
 };
 
-export default AuthProviders;
+export default AuthProvider;
