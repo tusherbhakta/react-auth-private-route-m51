@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
 
 const SignUp = () => {
+
+    const {createUser} = useContext(AuthContext);
+
     const handleSignup = e =>{
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(name, email, password);
+
+        // create user 
+        createUser(email,password)
+        .then(result =>{
+            console.log(result.user);
+        })
+        .catch(error =>{
+            console.log('Error', error);
+        })
+
+
     }
+
+
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col">
