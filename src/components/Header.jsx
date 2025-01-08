@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Header = () => {
-    const authInfo = useContext(AuthContext)
-    console.log(authInfo.name)
+    const {user} = useContext(AuthContext)
+    console.log(user)
     const links = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/login'>Login</Link></li>
@@ -42,7 +42,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn">{user?.email}</a>
             </div>
         </div>
     );
